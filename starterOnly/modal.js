@@ -32,4 +32,21 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
+// when user submits form
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+const firstName = document.getElementById('first').value;
 
+let firstNameIsValid = false;
+
+if (firstName.length < 3) {
+  console.log('erreurPrénom');
+} else {
+  firstNameIsValid = true;
+}
+
+if (firstNameIsValid) {
+  console.log('Afficher la modal de validation')
+} 
+
+})
