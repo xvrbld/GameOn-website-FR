@@ -42,6 +42,8 @@ function closeModalValidate() {
   modalbgValidate.style.display = "none";
 }
 
+// function email
+
 function validateEmail(email) {
   return String(email)
     .toLowerCase()
@@ -141,7 +143,7 @@ form.addEventListener("submit", function (e) {
     document.querySelector(".terms-form").style.display = "block";
   }
 
-  //modal
+  //modal valid validate
   if (
     firstNameIsValid &&
     lastNameIsValid &&
