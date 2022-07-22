@@ -14,7 +14,7 @@ const closeBtn = document.querySelectorAll(".close");
 const formData = document.querySelectorAll(".formData");
 const form = document.getElementById("form");
 const closeBtnValidate = document.querySelectorAll(".close-validate");
-const modalbg2 = document.querySelector(".bground2");
+const modalbgValidate = document.querySelector(".bground-validate");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -39,7 +39,7 @@ function closeModal() {
 
 // close validate modal form
 function closeModalValidate() {
-  modalbg2.style.display = "none";
+  modalbgValidate.style.display = "none";
 }
 
 function validateEmail(email) {
@@ -152,6 +152,6 @@ form.addEventListener("submit", function (e) {
     checkboxTermsIsValid
   ) {
     closeModal();
-    modalbg2.style.display = "block";
+    modalbgValidate.style.display = "block";
   }
 });
