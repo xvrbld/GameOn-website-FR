@@ -63,9 +63,11 @@ form.addEventListener("submit", function (e) {
 
   if (firstName.length < 3) {
     document.querySelector(".first-name-form").style.display = "block";
+    document.getElementById("first").classList.add("text-control-error");
   } else {
     firstNameIsValid = true;
     document.querySelector(".first-name-form").style.display = "none";
+    document.getElementById("first").classList.remove("text-control-error");
   }
 
   //lastname
@@ -75,9 +77,11 @@ form.addEventListener("submit", function (e) {
 
   if (lastName.length < 3) {
     document.querySelector(".last-name-form").style.display = "block";
+    document.getElementById("last").classList.add("text-control-error");
   } else {
     lastNameIsValid = true;
     document.querySelector(".last-name-form").style.display = "none";
+    document.getElementById("last").classList.remove("text-control-error");
   }
 
   //email
@@ -87,9 +91,11 @@ form.addEventListener("submit", function (e) {
 
   if (!validateEmail(email)) {
     document.querySelector(".email-form").style.display = "block";
+    document.getElementById("email").classList.add("text-control-error");
   } else {
     emailIsValid = true;
     document.querySelector(".email-form").style.display = "none";
+    document.getElementById("email").classList.remove("text-control-error");
   }
 
   //birthdate
@@ -100,8 +106,10 @@ form.addEventListener("submit", function (e) {
   if (birthdate_regex.test(birthdate)) {
     birthdateIsValid = true;
     document.querySelector(".birthdate-form").style.display = "none";
+    document.getElementById("birthdate").classList.remove("text-control-error");
   } else {
     document.querySelector(".birthdate-form").style.display = "block";
+    document.getElementById("birthdate").classList.add("text-control-error");
   }
 
   //championship quantity
@@ -113,8 +121,10 @@ form.addEventListener("submit", function (e) {
   if (!isNaN(championshipQuantity)) {
     championshipQuantityIsValid = true;
     document.querySelector(".quantity-form").style.display = "none";
+    document.getElementById("quantity").classList.remove("text-control-error");
   } else {
     document.querySelector(".quantity-form").style.display = "block";
+    document.getElementById("quantity").classList.add("text-control-error");
   }
 
   //location
